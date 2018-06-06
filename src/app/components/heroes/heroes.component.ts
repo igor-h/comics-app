@@ -10,9 +10,11 @@ import { Heroe } from '../../models/heroe.models';
 })
 export class HeroesComponent implements OnInit {
 
+  debugger;
   heroes:Heroe[] = [];
 
-  constructor(private _heroesService:HeroesService){
+  constructor(private _heroesService:HeroesService,
+              private router:Router){
     console.log("constructor...");
   }
 
@@ -21,8 +23,8 @@ export class HeroesComponent implements OnInit {
      console.log( this.heroes );
   }
 
-  verHeroe( idx:number ){
-    //this.router.navigate( ['/heroe',idx] );
+  openHeroe( idx:number ){
+    this.router.navigate( ['/heroe', idx] );
   }
 
 }
