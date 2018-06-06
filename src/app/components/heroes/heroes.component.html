@@ -4,10 +4,9 @@
 
 <div class="card-columns">
 
-<!-- *ngFor="let heroe of heroes; let i = index" -->
-  <!-- <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="foo" [index]="i"  *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta> -->
+<app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="foo" [index]="i"  *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta>
 
-  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+  <!-- <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
     <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
@@ -17,6 +16,6 @@
       <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver heroe...</a>
 
     </div>
-  </div>
+  </div> -->
 
 </div>

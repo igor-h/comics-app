@@ -75,11 +75,15 @@ export class HeroesService {
     let listaHeroes: Heroe[] = [];
     textoBuscar = textoBuscar.toLowerCase();
 
-    for(let heroe of this.heroes){
+    for( let i = 0; i < this.heroes.length; i ++ ){
+
+      let heroe = this.heroes[i];
+
       let nombre = heroe.nombre.toLowerCase();
 
-      if(nombre.indexOf( textoBuscar ) >= 0 ){
-        listaHeroes.push(heroe);
+      if( nombre.indexOf( textoBuscar ) >= 0  ){
+        heroe.idx = i;
+        listaHeroes.push( heroe )
       }
 
     }

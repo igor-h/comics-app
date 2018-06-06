@@ -21,8 +21,6 @@ export class HeroeComponent implements OnInit {
       console.log(this.hero);
     })
 
-    
-
   }
 
   ngOnInit() {
