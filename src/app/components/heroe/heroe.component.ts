@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Heroe } from '../../models/heroe.models';
+import { HeroesService } from '../../services/heroes.service';
 
 
 @Component({
@@ -8,11 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroeComponent implements OnInit {
 
-  constructor( private activatedRoute:ActivatedRoute ) { 
+  hero: Heroe;
+
+  constructor( private activatedRoute:ActivatedRoute,
+               private _heroeService: HeroesService) { 
     
     this.activatedRoute.params.subscribe( params =>{
-      console.log(params)
+      console.log(params);
+      this.hero = _heroeService.getHero(params.id);
+      console.log(this.hero);
     })
+
+    
 
   }
 
