@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-example": {
+    "comics-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-example",
+            "outputPath": "dist/comics-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -55,18 +55,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-example:build"
+            "browserTarget": "comics-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-example:build:production"
+              "browserTarget": "comics-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-example:build"
+            "browserTarget": "comics-app:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         }
       }
     },
-    "angular-example-e2e": {
+    "comics-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-example:serve"
+            "devServerTarget": "comics-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-example:serve:production"
+              "devServerTarget": "comics-app:serve:production"
             }
           }
         },
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "angular-example"
+  "defaultProject": "comics-app"
 }

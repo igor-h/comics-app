@@ -10,7 +10,6 @@ import { Heroe } from '../../models/heroe.models';
 })
 export class HeroesComponent implements OnInit {
 
-  debugger;
   heroes:Heroe[] = [];
 
   constructor(private _heroesService:HeroesService,

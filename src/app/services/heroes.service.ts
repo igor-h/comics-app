@@ -83,7 +83,7 @@ export class HeroesService {
       }
 
     }
-debugger;
+
     return listaHeroes;
   }
 
