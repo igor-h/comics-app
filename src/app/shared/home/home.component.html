@@ -1,26 +1,5 @@
 <app-toolbar>ssss</app-toolbar>
+<app-navbar></app-navbar>
 
-
-<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-<h1>
-  {{title}}
-</h1>
-
-<mat-form-field>
-  <input matInput placeholder="Simple Input" [(ngModel)]="title">
-</mat-form-field>
-
-<mat-icon>home</mat-icon>
-
-<button mat-raised-button>I'm a button</button>
-
-<mat-form-field>
-  <mat-select placeholder="I'm a select" [(ngModel)]="selectedValue">
-    <mat-option *ngFor="let item of items" [value]="item.value">
-      {{item.view}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<app-progresss-spinner></app-progresss-spinner>
 
 <app-footer></app-footer>
